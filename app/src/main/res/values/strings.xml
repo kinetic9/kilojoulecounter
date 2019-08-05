@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Kilojoule Counter</string>
     <string name="action_settings">Settings</string>
+    <string name="diary">DIARY</string>
+    <string name="dailyAverage">Daily Average</string>
+    <string name="foodTotal">Food Total</string>
+    <string name="exerciseTotal">Exercise Total</string>
+    <string name="dailyAverageValue">0 kJ</string>
+    <string name="foodValue">0 kJ</string>
+    <string name="exerciseValue">0 kJ</string>
 </resources>

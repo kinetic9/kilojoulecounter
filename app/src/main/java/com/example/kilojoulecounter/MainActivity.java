@@ -1,5 +1,7 @@
 package com.example.kilojoulecounter;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,7 +14,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    public SharedPreferences.Editor diaryEditor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // Fetch existing entries
+        SharedPreferences sharedPrefs = getSharedPreferences("diary_entries", Activity.MODE_PRIVATE);
+        diaryEditor = sharedPrefs.edit();
+
     }
 
     @Override
