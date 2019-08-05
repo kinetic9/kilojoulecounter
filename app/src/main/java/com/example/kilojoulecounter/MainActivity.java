@@ -1,6 +1,7 @@
 package com.example.kilojoulecounter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -18,6 +19,10 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity {
 
     public SharedPreferences.Editor diaryEditor;
+    //Running totals
+    public double foodTot;
+    public double averageNKI;
+    public double exerciseTot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +35,23 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+               startActivity(new Intent(MainActivity.this, addData.class));
             }
         });
 
         // Fetch existing entries
         SharedPreferences sharedPrefs = getSharedPreferences("diary_entries", Activity.MODE_PRIVATE);
+        //SharedPreferences runningTotals = getSharedPreferences("running_totals", Activity.MODE_PRIVATE);
+
         diaryEditor = sharedPrefs.edit();
 
+        //set empty array if no previous data exists
+        String diaryJSONString = sharedPrefs.getString("diary","[]");
+
     }
+
+    //TODO: add a way to load data from shared prefs
+    //TODO: implement threads for saving/fetching data
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
