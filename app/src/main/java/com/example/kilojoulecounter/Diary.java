@@ -1,10 +1,15 @@
 package com.example.kilojoulecounter;
 
+import java.text.SimpleDateFormat;
+
 import  java.util.ArrayList;
+import java.util.Calendar;
+
 
 public class Diary {
 
     private double breakfast, sports, gym, snacks, lunch, dinner, jogging;
+    private String date;
 
     public Diary(){
 
@@ -20,6 +25,14 @@ public class Diary {
         this.sports = sports;
         this.snacks = snacks;
         this.jogging = jogging;
+
+
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat mdformat = new SimpleDateFormat("EEE, d MMM yyyy");
+
+
+        this.date = mdformat.format(calendar.getTime());
     }
 
     // Getters
@@ -52,13 +65,20 @@ public class Diary {
         return jogging;
     }
 
+    public String getDate() {
+        return date;
+    }
 
-    public static double dailyNKI(ArrayList<Double> values ){
+//    public static double dailyNKI(ArrayList<Double> values ){
+//
+//        double nki = (values.get(0) + values.get(1) + values.get(2)
+//                + values.get(3)) - (values.get(4) + values.get(5) + values.get(6));
+//
+//        return nki;
+//    }
 
-        double sum0 = (values.get(0) + values.get(1) + values.get(2)
-                + values.get(3)) - (values.get(4) + values.get(5) + values.get(6));
-
-        return sum0;
+    public double nettKiloJoule(){
+        return ((breakfast + lunch + dinner + snacks) - (gym+sports+jogging));
     }
 
     public static double averageNKI(){

@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
-import static com.example.kilojoulecounter.Diary.dailyNKI;
+
 import static java.lang.Double.parseDouble;
 
 
@@ -59,7 +59,7 @@ public class addData extends AppCompatActivity {
         values.add(gy);
         values.add(jog);
 
-        double dailyAmount = dailyNKI(values);
+        //double dailyAmount = dailyNKI(values);
 
 
     }

@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +37,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                startActivity(new Intent(MainActivity.this, addData.class));
+            }
+        });
+
+        Button diary = findViewById(R.id.button);
+        diary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, DiaryList.class));
             }
         });
 
