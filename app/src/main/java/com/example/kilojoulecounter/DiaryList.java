@@ -3,12 +3,12 @@ package com.example.kilojoulecounter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-public class diaryCalendar extends AppCompatActivity {
+// list to view different entries
+public class DiaryList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_diary_calendar);
+        setContentView(R.layout.activity_diary_list);
     }
 }

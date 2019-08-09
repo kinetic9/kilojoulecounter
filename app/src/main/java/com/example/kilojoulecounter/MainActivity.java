@@ -40,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Fetch existing entries
-        SharedPreferences sharedPrefs = getSharedPreferences("diary_entries", Activity.MODE_PRIVATE);
+        SharedPreferences sharedPrefs = getSharedPreferences("diary", Activity.MODE_PRIVATE);
         //SharedPreferences runningTotals = getSharedPreferences("running_totals", Activity.MODE_PRIVATE);
 
         diaryEditor = sharedPrefs.edit();
 
         //set empty array if no previous data exists
         String diaryJSONString = sharedPrefs.getString("diary","[]");
+
 
     }
 
