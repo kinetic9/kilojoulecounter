@@ -86,6 +86,10 @@ public class Diary {
         return 0;
     }
 
+    public String toString(){
+        return this.breakfast+","+this.lunch+","+this.dinner+","+this.snacks+","+this.sports+","+this.gym+","+this.jogging+","+this.date;
+    }
+
     public static double categoryTotal(){
         return  0;
     }

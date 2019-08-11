@@ -1,5 +1,6 @@
 package com.example.kilojoulecounter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,15 +34,18 @@ public class DiaryAdapter extends RecyclerView.Adapter<DiaryAdapter.MyViewHolder
         return new MyViewHolder(itemView);
     }
 
-    public void onBindViewHolder(MyViewHolder holder, int position){
+    public void onBindViewHolder(MyViewHolder holder, final int position){
         final Diary diary = diaryList.get(position);
         holder.date.setText(diary.getDate());
         holder.nki.setText(Double.toString(diary.nettKiloJoule()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"Clicked Item"+diary.getBreakfast(),Toast.LENGTH_SHORT).show();
 
+                Toast.makeText(view.getContext(),"Clicked Item"+diary.getBreakfast(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(),DiaryEntry.class);
+                intent.putExtra("entry",diaryList.get(position).toString());
+                view.getContext().startActivity(intent);
             }
         });
 
