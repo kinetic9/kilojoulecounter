@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".addData"
-    >
+    tools:context=".addData">
 
     <EditText
         android:id="@+id/editTextjog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="531dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="155dp"
         android:ems="10"
@@ -21,63 +20,62 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextsport"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextsnacks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="359dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="327dp"
         android:ems="10"
         android:hint="Snacks"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextdinner" />
 
     <EditText
         android:id="@+id/editTextlunch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="246dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="440dp"
         android:ems="10"
         android:hint="Lunch"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextbreakfast" />
 
     <EditText
         android:id="@+id/editTextbreakfast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="186dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="500dp"
         android:ems="10"
         android:hint="Breakfast"
         android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editTextgym"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="270dp"
         android:ems="10"
@@ -85,24 +83,28 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextsnacks"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextdinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
-        android:layout_marginBottom="382dp"
+        android:layout_marginBottom="412dp"
         android:ems="10"
         android:hint="Dinner"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextlunch"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView"
@@ -111,40 +113,40 @@
 
 
         android:layout_marginStart="62dp"
-        android:layout_marginTop="106dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="63dp"
-        android:layout_marginBottom="581dp"
+        android:layout_marginBottom="561dp"
         android:text="Enter Kilojoule Estimates"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.012" />
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="87dp"
         android:layout_height="41dp"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="594dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="160dp"
         android:background="@drawable/rounded_corner_button"
         android:backgroundTint="#9C27B0"
         android:text="SAVE"
         android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextjog" />
 
     <EditText
         android:id="@+id/editTextsport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
-        android:layout_marginTop="471dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="215dp"
         android:ems="10"
@@ -152,7 +154,9 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextgym"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
