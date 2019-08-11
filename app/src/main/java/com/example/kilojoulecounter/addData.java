@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 import static java.lang.Double.parseDouble;
@@ -14,16 +17,27 @@ import static java.lang.Double.parseDouble;
 
 public class addData extends AppCompatActivity {
 
-
+    private List<Diary> diaryList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_data);
+
+        Button save = findViewById(R.id.buttonSave);
+        save.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                saveEntry();
+                Toast.makeText(view.getContext(),"Entry saved",Toast.LENGTH_SHORT).show();
+            }
+        } );
+
+
     }
 
 
-    public void saveEntry(View view){
+    public void saveEntry(){
 
         // find views by id
         EditText breakfast = findViewById(R.id.editTextbreakfast);
@@ -61,6 +75,7 @@ public class addData extends AppCompatActivity {
 
         //double dailyAmount = dailyNKI(values);
 
-
     }
+
+
 }
